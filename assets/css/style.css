@@ -564,14 +564,6 @@ header.main-header img {
     margin-right: 20px;
 }
 
-.menu-wrapper nav ul.nav-menu > li:first-child > a {
-    margin-left: 0;
-}
-
-.menu-wrapper nav ul.nav-menu > li:last-child > a {
-    margin-right: 0;
-}
-
 @media (max-width: 991px) {
     header.main-header .menu-toggle {
         cursor: pointer;
@@ -665,6 +657,8 @@ header.main-header img {
         display: block;
         width: 100%;
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 50px;
     }
 
@@ -716,6 +710,7 @@ header.main-header img {
         width: calc(100% - 50px);
         left: 25px;
         top: 75px;
+        overflow-y: scroll;
     }
 }
 
@@ -930,6 +925,7 @@ ul.slides li .slide {
 
 /*SECTION WITH IMAGE AND TEXT*/
 .img-side {
+    background: #1c1d20;
     position: relative;
     display: inline-block;
 }
@@ -1007,6 +1003,10 @@ ul.slides li .slide {
         width: 50%;
         font-size: 3.750em;
     }
+}
+
+.remove-style {
+    opacity: 0;
 }
 
 .text-side p {

@@ -230,6 +230,7 @@ jQuery(document).ready(function($){
 
 		$("#video")[0].src += "&autoplay=1";
 		ev.preventDefault();
+		$('.square-text').addClass('remove-style')
 
 	});
 });
