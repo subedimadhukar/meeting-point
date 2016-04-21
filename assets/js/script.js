@@ -95,28 +95,30 @@ jQuery(document).ready(function($){
 		}
 	});
 
-  	imageCarousel.on('initialized.owl.carousel',updateSize());
-    imageCarousel.on('refreshed.owl.carousel',updateSize());
-    imageCarousel.on('resized.owl.carousel',updateSize());
-    imageCarousel.on('changed.owl.carousel',updateSize());
-   
-    function updateSize(){
-        var minHeight=parseInt($('.image-carousel .owl-item').eq(0).css('height'));
-        $('.owl-item').each(function () {
-            var thisHeight = parseInt($(this).css('height'));
-            minHeight=(minHeight<=thisHeight?minHeight:thisHeight);
-        });
-        $('.image-carousel .owl-stage-outer').css('height',minHeight+'px');
-
-        /*show the bottom part of the cropped images*/
-        $('.image-carousel.owl-carousel .owl-item img').each(function(){
-            var thisHeight = parseInt($(this).css('height'));
-            if(thisHeight>minHeight){
-                $(this).css('margin-top',-1*(thisHeight-minHeight)+'px');
-            }
-        });
-
-    }
+  	//imageCarousel.on('initialized.owl.carousel',updateSize());
+    //imageCarousel.on('refreshed.owl.carousel',updateSize());
+    //imageCarousel.on('resized.owl.carousel',updateSize());
+    //imageCarousel.on('changed.owl.carousel',updateSize());
+    //
+    //function updateSize(){
+    //    //var minHeight=parseInt($('.image-carousel .owl-item').eq(0).css('height'));
+    //    var minHeight=parseInt($('.image-carousel .owl-item').eq(0).find('img').height);
+		//console.log(minHeight);
+    //    $('.owl-item').each(function () {
+    //        var thisHeight = parseInt($(this).css('height'));
+    //        minHeight=(minHeight<=thisHeight?minHeight:thisHeight);
+    //    });
+    //    $('.image-carousel .owl-stage-outer').css('height',minHeight+'px');
+    //
+    //    /*show the bottom part of the cropped images*/
+    //    $('.image-carousel.owl-carousel .owl-item img').each(function(){
+    //        var thisHeight = parseInt($(this).css('height'));
+    //        if(thisHeight>minHeight){
+    //            $(this).css('margin-top',-1*(thisHeight-minHeight)+'px');
+    //        }
+    //    });
+    //
+    //}
 
     //client carousel
 	$('.client-carousel').owlCarousel({
