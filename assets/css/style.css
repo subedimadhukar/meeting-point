@@ -934,13 +934,10 @@ ul.slides li .slide {
     display: inline-block;
 }
 
-.img-side img {
-    width: 100%;
-}
-
 .img-side .square-text {
     padding: 30px;
     border: solid 10px #f80050;
+    background: rgba(0,0,0,.9);
     font-weight: bold;
 }
 
@@ -952,6 +949,11 @@ ul.slides li .slide {
     .img-side .square-text{
         color: #f80050 !important;
         text-align: left;
+    }
+
+    .img-side iframe {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 

@@ -224,6 +224,14 @@ jQuery(document).ready(function($){
 		opacity: 1,
 		theme: 'dark_square', /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
 	});
+
+	//Play iFrame embedded YouTube Video on click
+	$('#play-video').on('click', function(ev) {
+
+		$("#video")[0].src += "&autoplay=1";
+		ev.preventDefault();
+
+	});
 });
 
 
